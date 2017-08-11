@@ -3,6 +3,7 @@ const helmet = require('helmet');
 const schipholRunways = require('schiphol-runways');
 
 const PORT = process.env.PORT || 8000;
+const REFRESH_TIME = 300000;
 
 let runways;
 
@@ -12,7 +13,7 @@ setInterval(() => {
     debug('Fetching runway status');
 
     getRunwayData();
-}, 30000);
+}, REFRESH_TIME);
 
 const app = express();
 app.use(helmet());
