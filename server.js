@@ -1,7 +1,7 @@
 const express = require('express');
+const helmet = require('helmet');
 const schipholRunways = require('schiphol-runways');
 
-const app = express();
 const PORT = process.env.PORT || 8000;
 
 let runways;
@@ -14,11 +14,14 @@ setInterval(() => {
     getRunwayData();
 }, 30000);
 
+const app = express();
+app.use(helmet());
+
 app.get('/runways', (req, res) => {
     if (!runways) {
-        getRunwayData().then((runwayData) => res.end(JSON.stringify(runwayData)));
+        getRunwayData().then((runwayData) => res.json(runwayData));
     } else {
-        res.end(JSON.stringify(runways));
+        res.json(runways);
     }
 });
 
