@@ -7,7 +7,7 @@
   "dependencies": {
     "express": "^4.15.4",
     "helmet": "^3.8.1",
-    "schiphol-runways": "^0.1.0"
+    "schiphol-runways": "1.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"

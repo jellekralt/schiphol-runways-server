@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "schiphol-runways-server",
+  "builds": [
+    { "src": "server.js", "use": "@now/node" }
+  ],
+  "routes": [{ "src": "/runways", "dest": "server.js" }]
+}
