@@ -5,7 +5,7 @@
   "description": "Schiphol Runways API Server",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.15.4",
+    "express": "^4.17.3",
     "helmet": "^3.8.1",
     "schiphol-runways": "1.0.0"
   },
